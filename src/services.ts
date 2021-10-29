@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 export function home(req: Request, res: Response) {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile("index.html", { root: "./" });
 }
 
 export function date(req: Request, res: Response) {
