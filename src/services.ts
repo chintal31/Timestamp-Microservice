@@ -4,10 +4,7 @@ export function home(req: Request, res: Response) {
   res.sendFile("index.html", { root: "./" });
 }
 
-export function hello(req: Request, res: Response) {
-  res.json("hello world");
-}
-export function date(req: Request, res: Response) {
+export function handleDateStr(req: Request, res: Response) {
   let givenDate: number | Date;
   if (isUNIX(req.params.date)) {
     givenDate = parseInt(req.params.date);

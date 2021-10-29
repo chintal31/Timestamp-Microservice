@@ -1,9 +1,8 @@
 import { Application } from "express";
-import { home, date, hello, currentTime } from "./services";
+import { home, handleDateStr, currentTime } from "./services";
 
 export const routes = (app: Application) => {
   app.get("/", home);
-  app.get("/hello", hello);
-  app.get("/api/:date", date);
+  app.get("/api/:date", handleDateStr);
   app.get("/api/", currentTime);
 };
