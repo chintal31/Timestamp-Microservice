@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-export function helloWorld(req: Request, res: Response) {
-  res.status(200).json("Hello World!");
+export function home(req: Request, res: Response) {
+  res.sendFile(__dirname + "/src/index.html");
 }
 
 export function date(req: Request, res: Response) {
