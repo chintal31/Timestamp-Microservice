@@ -31,3 +31,11 @@ export function currentTime(req: Request, res: Response) {
     .status(200)
     .json({ unix: Date.now(), utc: new Date().toUTCString() });
 }
+
+export function userInfo(req: Request, res: Response) {
+  return res.status(200).json({
+    ipaddress: req.ip,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"],
+  });
+}
