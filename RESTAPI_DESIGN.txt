@@ -1,0 +1,43 @@
+//ADD/HIRE EMPLOYEE
+TYPE: POST
+Required
+    fullname
+    email
+    departmentId
+    positionId
+    empId (auto generated)
+Additional Fields
+    Gender
+    startDate
+    address
+    experience
+    
+//PROMOTE EMPLOYEE
+TYPE: PUT
+Required
+    empId
+    posId
+    depId
+
+//FIRE EMPLOYEE
+TYPE: DELETE
+Required
+    empId
+    posId
+    depId
+
+//ADD DEPARTMENT
+TYPE: POST
+Required
+    depName
+    depId (auto generated)
+
+//ADD POSITION
+TYPE: POST
+Required
+    depId
+    posName
+    posId (auto generated)
+
+
+
